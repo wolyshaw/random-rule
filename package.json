@@ -1,0 +1,29 @@
+{
+  "browser": "lib/index.umd.js",
+  "name": "random-rule",
+  "version": "1.0.0",
+  "description": "get random string",
+  "main": "lib/index.cjs.js",
+  "module": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wolyshaw/random-rule.git"
+  },
+  "keywords": [
+    "random",
+    "random-string"
+  ],
+  "author": "wolyshaw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wolyshaw/random-rule/issues"
+  },
+  "homepage": "https://github.com/wolyshaw/random-rule#readme",
+  "devDependencies": {
+    "rollup": "^1.10.0"
+  }
+}
