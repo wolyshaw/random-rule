@@ -29,5 +29,5 @@
     "pre-commit": "^1.2.2",
     "rollup": "^1.10.0"
   },
-  "precommit": "build, test"
+  "precommit": "test"
 }
