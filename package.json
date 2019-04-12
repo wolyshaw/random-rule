@@ -1,12 +1,13 @@
 {
   "browser": "lib/index.umd.js",
   "name": "random-rule",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "get random string",
-  "main": "lib/index.cjs.js",
-  "module": "index.js",
+  "main": "index.js",
+  "module": "lib/index.esm.js",
+  "types": "index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx mocha",
     "build": "npx rollup -c"
   },
   "repository": {
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/wolyshaw/random-rule#readme",
   "devDependencies": {
+    "mocha": "^6.1.2",
     "rollup": "^1.10.0"
   }
 }

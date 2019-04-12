@@ -8,29 +8,16 @@ const capitalLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
     lowercaseLetters: lowercaseLetters,
     number: number,
     symbols: symbols
+  },
+  defaultOption = {
+    capitalLetters: true,
+    lowercaseLetters: true,
+    number: true,
+    symbols: true,
+    length: 10
   }
 
-const getRandom = (max = 10, min = 0) => {
-  const range = max - min
-  return min + Math.round(Math.random() * range)
-}
-
-const getSinge = (option = {}) => {
-  let rule
-  const rules = []
-  for (const k in option) {
-    if (option.hasOwnProperty(k)) {
-      if(option[k] === true) {
-        rules.push(keys[k])
-      }
-    }
-  }
-  if(!rules.length) {
-    rules.push(lowercaseLetters)
-  }
-  rule = rules[getRandom(rules.length - 1)]
-  return rule[getRandom(rule.length - 1)]
-}
+const getRandom = (max = 10, min = 0) => min + Math.round(Math.random() * (max - min))
 
 const randomRule = (option = {}) => {
   let string = ''
@@ -45,16 +32,30 @@ const randomRule = (option = {}) => {
     }
   } else {
     option = option || {}
-    option.capitalLetters = typeof option.capitalLetters === 'boolean' ? option.capitalLetters : true
-    option.lowercaseLetters = typeof option.lowercaseLetters === 'boolean' ? option.lowercaseLetters : true
-    option.number = typeof option.number === 'boolean' ? option.number : true
-    option.symbols = typeof option.symbols === 'boolean' ? option.symbols : true
-    option.length = typeof option.length === 'number' ? option.length : 10
+    const indexs = [], rules = []
+    for (const k in defaultOption) {
+      if(typeof option[k] === 'undefined') {
+        option[k] = defaultOption[k]
+      }
+      if (defaultOption.hasOwnProperty(k) && option[k] === true) {
+        rules.push(keys[k])
+      }
+    }
+    if(!rules.length) {
+      rules.push(lowercaseLetters)
+    }
     for (let i = 0; i < option.length; i++) {
-      string += getSinge(option)
+      indexs.push(i)
+    }
+    for (let i = 0; i < option.length; i++) {
+      const tmp = getRandom(indexs.length - 1),
+        rule = rules[indexs[tmp] % rules.length],
+        index = getRandom(rule.length - 1)
+      indexs.splice(tmp, 1)
+      string += rule[index]
     }
   }
   return string
 }
 
-export default randomRule
+module.exports = randomRule
