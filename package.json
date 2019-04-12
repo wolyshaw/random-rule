@@ -1,7 +1,7 @@
 {
   "browser": "lib/index.umd.js",
   "name": "random-rule",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "get random string",
   "main": "index.js",
   "module": "lib/index.esm.js",
@@ -26,6 +26,8 @@
   "homepage": "https://github.com/wolyshaw/random-rule#readme",
   "devDependencies": {
     "mocha": "^6.1.2",
+    "pre-commit": "^1.2.2",
     "rollup": "^1.10.0"
-  }
+  },
+  "precommit": "build, test"
 }
