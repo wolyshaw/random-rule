@@ -1,10 +1,10 @@
 {
   "browser": "lib/index.umd.js",
   "name": "random-rule",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "get random string",
-  "main": "index.js",
-  "module": "lib/index.esm.js",
+  "main": "lib/index.cjs.js",
+  "module": "index.js",
   "types": "index.d.ts",
   "scripts": {
     "test": "npx mocha",

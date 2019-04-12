@@ -1,4 +1,4 @@
-const randomRule = require('../index')
+const randomRule = require('../lib/index.cjs')
 
 describe('未输入参数时', () => {
   it('返回10位随机字符串', done => {

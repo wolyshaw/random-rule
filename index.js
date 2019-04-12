@@ -19,7 +19,7 @@ const capitalLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
 
 const getRandom = (max = 10, min = 0) => min + Math.round(Math.random() * (max - min))
 
-const randomRule = (option = {}) => {
+export default (option = {}) => {
   let string = ''
   if(typeof option === 'string') {
     for (let i = 0; i < option.length; i++) {
@@ -58,4 +58,3 @@ const randomRule = (option = {}) => {
   return string
 }
 
-module.exports = randomRule
