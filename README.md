@@ -4,6 +4,10 @@
 
 random-rule 是一个使用十分简单按照固定规则生成随机字符串的库
 
+### 在线demo
+
+[在线demo](https://codepen.io/wolyshaw-the-lessful/pen/JVJpVw)
+
 ### 安装
 
 `npm install random-rule --save`
