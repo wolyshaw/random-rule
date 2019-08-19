@@ -1,7 +1,7 @@
 {
   "browser": "lib/index.umd.js",
   "name": "random-rule",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "get random string",
   "main": "lib/index.cjs.js",
   "module": "index.js",
