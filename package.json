@@ -25,9 +25,9 @@
   },
   "homepage": "https://github.com/wolyshaw/random-rule#readme",
   "devDependencies": {
-    "mocha": "^6.1.2",
+    "mocha": "^6.2.0",
     "pre-commit": "^1.2.2",
-    "rollup": "^1.10.0"
+    "rollup": "^1.19.4"
   },
   "precommit": "test"
 }
