@@ -6,7 +6,7 @@ random-rule 是一个使用十分简单按照固定规则生成随机字符串�
 
 ### 在线demo
 
-[在线demo](https://codepen.io/wolyshaw-the-lessful/pen/JVJpVw)
+[![Edit magical-wu-115ih](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/magical-wu-115ih?fontsize=14&hidenavigation=1&theme=dark)
 
 ### 安装
 
